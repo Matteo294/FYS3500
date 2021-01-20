@@ -1,0 +1,26 @@
+\subsubsection*{Parity}
+The action of the parity operator $\mathcal{P}$ is defined on the coordinate vector as $$ \mathcal{P} \ket{x} = \ket{-x}$$.
+For a generical state $\ket{\psi}$ it automatically follows that 
+\begin{equation*}
+    \mathcal{P}\ket{\psi} = \mathcal{P} \, \int dx \, \ket{x} \bracket{x}{\psi} = \int dx \, 
+    \ket{-x} \bracket{x}{\psi} = \int dx' \, \ket{x'} \bracket{-x'}{\psi}
+\end{equation*}
+so that $$\bracketX{x}{\mathcal{P}}{\psi} = \psi(-x)$$
+In spherical coordinates the action of the parity operator causes 
+$r \rightarrow r$, $\theta \rightarrow \pi - \theta$ and $\phi \rightarrow \pi + \phi$. \\
+Suppose now that $\ket{\psi}$ is an eigenstate of the parity operator so that 
+$$\mathcal{P} \ket{\psi} = c \ket{\psi}$$
+By applying $\mathcal{P}$ to both member of the last expression, one obtains that
+\begin{equation}
+     \mathcal{P}^2 \ket{\psi} = c^2 \ket{\psi}
+     \label{eq:paritysquared1}
+\end{equation}
+but also
+\begin{equation}
+    \mathcal{P}^2 \ket{\psi} = \mathcal{P} \int dx \, 
+    \ket{-x} \bracket{x}{\psi} = \int dx \, 
+    \ket{-x} \bracket{x}{\psi} = \ket{\psi}
+    \label{eq:paritysquared2}
+\end{equation}
+and combining \ref{eq:paritysquared1} and \ref{eq:paritysquared2} we conclude that $c = \pm 1$.
+If the eigenvalue is $+1$ ($-1$) we say that the corresponding eigenstate has even (odd) parity.
