@@ -1,4 +1,4 @@
-\subsubsection*{Parity}
+\subsection*{Parity}
 The action of the parity operator $\mathcal{P}$ is defined on the coordinate vector as $$ \mathcal{P} \ket{x} = \ket{-x}$$.
 For a generical state $\ket{\psi}$ it automatically follows that 
 \begin{equation*}
@@ -15,7 +15,7 @@ By applying $\mathcal{P}$ to both member of the last expression, one obtains tha
      \mathcal{P}^2 \ket{\psi} = c^2 \ket{\psi}
      \label{eq:paritysquared1}
 \end{equation}
-but also
+but also, from what previously said
 \begin{equation}
     \mathcal{P}^2 \ket{\psi} = \mathcal{P} \int dx \, 
     \ket{-x} \bracket{x}{\psi} = \int dx \, 
@@ -24,3 +24,59 @@ but also
 \end{equation}
 and combining \ref{eq:paritysquared1} and \ref{eq:paritysquared2} we conclude that $c = \pm 1$.
 If the eigenvalue is $+1$ ($-1$) we say that the corresponding eigenstate has even (odd) parity.
+
+\subsection*{Cross section}
+Let us define the flux $J$ as a quantity that quantifies the rate of production of new particles
+in the experiment (in the sense of things coming out of the target)
+\begin{equation*}
+    J = n_b \, v_i
+\end{equation*}
+where $n_b$ is the number density of particles in the beam (number of particles per unit volume) and 
+$v_i$ is the speed of each particle in the rest frame of the target.
+\begin{equation*}
+    \left[J\right] = m^{-2}s^{-1}
+\end{equation*}
+Call $N$ the number of particles in the target "illuminated" by the beam: we can then guess that
+the number of scattered particle per second is of the form
+\begin{equation*}
+    W_r = J N \sigma_r
+\end{equation*}
+where $\sigma_r$ is a proportionality constant called \emph{cross section}. One has that 
+\begin{equation*}
+    \left[\sigma_r\right] = m^2
+\end{equation*}
+The cross section can be thought as the equivalent area that allows the process to occur. 
+For example if both the target and the beam consist in a single particle, the equivalent area
+at which the collison may occur is a circle of radius $2r$, hence $\sigma_r = \pi\left(2r\right)^2 
+= 4\pi r$. To visualise it keep one sphere fixed, put the other
+in contact and move it around keeping one contact point: this is the area that allows the collison.
+
+\subsection*{Lifetimes}
+Decay is a stochastic process: hence we can only know the probability of an atom to decay.
+By observing a population of nuclei one describe the behaviour of the systems in therms of a
+differential equation
+\begin{equation*}
+    \text{Activity} \ \equiv \ -\frac{dN}{dt} = \lambda N
+\end{equation*}
+from which
+\begin{equation*}
+    N(t) = N_0 e^{-\lambda t}
+\end{equation*}
+the time at which the population is reduced by a factor $2$ is 
+$$t_{N/2} = \frac{1}{\lambda} \ln 2 \equiv \tau \ln 2$$
+and we call $\tau$ (or equivalently $1/\lambda$) the decay characteristic time.
+
+\subsection*{Decay width, branching ratio}
+The probability distribution over time of the decay to occur is normally a gaussian-like distribution.
+Let us then define a parameter $\Gamma$ called the \emph{decay width} that is the time difference
+of the two points in which we have $N(t) = N/2$ (otherwise called FWHM). \\
+If a particle may decay into multiple particles, we define a probability distribution for each 
+event, and we can calculate the factor $\Gamma$ for each of them (call it $\Gamma_k$). We then define the
+\emph{branching ratio} as $$B_k = \frac{\Gamma_k}{\Gamma}$$ to compare the different cases.
+
+\subsection*{Q-value}
+The Q-value express the mass energy difference between the states before and after the decay.
+For example suppose that a particle $x$ may decay into $x$ and $z$. Then the Q-value for this event
+is $$Q = \left(m_x - m_y - m_z\right) c^2$$.
+If Q is positive energy is release during the process, otherwise we should add energy in order to 
+make the decay happen.
