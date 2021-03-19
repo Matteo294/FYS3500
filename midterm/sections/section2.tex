@@ -1,0 +1,29 @@
+\subsection*{a}
+The mass of the atom is given by
+\begin{equation*}
+    M(^{48}\text{CA}) = Zm_P + (A-Z)m_N - \frac{B(A, Z)}{c^2}
+    \label{eq:semi_empirical_mass_formula}
+\end{equation*}
+where $B$ indicates the binding energy, which in turns can be calculated via the semi-empirical formula (atomic units)
+\begin{equation}
+    B(A, Z)= a_v A + a_s A^{2/3} + a_c \frac{Z(Z-1)}{A^{1/3}} - a_{sym} \frac{(A - 2Z)^2}{A} + \delta (A, Z)
+    \label{eq:semi_empirical_BE_formula}
+\end{equation}
+One can simply pop the values of $A$ and $Z$ into the formula using the coefficients
+\begin{equation*}
+    a_v = \qquad a_s = \qquad a_c = \qquad a_{sym} = \qquad a_p = \qquad
+\end{equation*}
+and obtains $B(A, Z) = val$. Hence, inserting the result into \ref{eq:semi_empirical_mass_formula} one obtains
+\begin{equation*}
+    M(^{48}\text{CA}) \simeq val
+\end{equation*}
+
+\subsection*{b}
+Since $B(A, Z) = \sum_i B_i(A_i, Z_i)$ one can calculate the contribution of the binding energy of the last neutron as 
+\begin{equation*}
+    B_{neutron} = B(A, Z) - B(A-1, Z)
+\end{equation*}
+And using expression \ref{eq:semi_empirical_BE_formula} to calculate the two quantities one ends up with an estimation for the energy required to extract the neutron
+\begin{equation*}
+    B_{neutron} = B(A, Z) - B(A-1, Z) \approx 
+\end{equation*}
