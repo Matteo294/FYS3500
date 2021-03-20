@@ -10,8 +10,9 @@ T_halve_Ba = 82.93/60 # Half life time of 139Ba int hours
 lam_Cs = np.log(2)/T_halve_Cs # Decay width of 139Cs
 lam_Ba = np.log(2)/T_halve_Ba # Decay width of 139Ba
 
-print(np.log(2), T_halve_Cs, lam_Cs, lam_Ba, lam_Cs-lam_Ba)
-N0 = 1000
+N0 = 37e6/(lam_Cs/60/60)
+
+print("N0:", int(N0))
 
 # First decay
 def N1(N0, t, lam1):
