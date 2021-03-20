@@ -9,14 +9,27 @@ where $B$ indicates the binding energy, which in turns can be calculated via the
     B(A, Z)= a_v A + a_s A^{2/3} + a_c \frac{Z(Z-1)}{A^{1/3}} - a_{sym} \frac{(A - 2Z)^2}{A} + \delta (A, Z)
     \label{eq:semi_empirical_BE_formula}
 \end{equation}
-One can simply pop the values of $A$ and $Z$ into the formula using the coefficients
+where 
 \begin{equation*}
-    a_v = \qquad a_s = \qquad a_c = \qquad a_{sym} = \qquad a_p = \qquad
+    \delta(A, Z) = 
+    \begin{cases}
+        \frac{a_P}{A^{3/4}} \qquad \text{if Z and N are even} \\
+        0 \qquad \text{if A is odd} \\
+        -\frac{a_P}{A^{3/4}} \qquad \text{if Z and N are odd} 
+    \end{cases}
 \end{equation*}
-and obtains $B(A, Z) = val$. Hence, inserting the result into \ref{eq:semi_empirical_mass_formula} one obtains
+One can simply pop in the values of $A$ and $Z$ into the formula using the fitted coefficients (source Wikipedia) in units of $MeV/c^2$
 \begin{equation*}
-    M(^{48}\text{CA}) \simeq val
+    a_v = 15.8 \qquad a_s = 18.3 \qquad a_c = 0.714 \qquad a_{sym} = 23.2 \qquad a_P = 12
 \end{equation*}
+and obtains $B(A, Z) = 621.71~MeV/c^2$. Hence, inserting the result into \ref{eq:semi_empirical_mass_formula} one obtains
+\begin{equation*}
+    M(^{48}\text{Ca}) \simeq 44451.55~MeV/c^2 \simeq 47.3~u
+\end{equation*}
+Even though the result is closet to the experimental value there is a small difference. One can justify this difference by observing that the SEMF is 
+not a complete theoretical model, but rather a fit to experimental data of a model with some theoretical fundations. As such, it is reasonable that the model
+can give an overall good description of the data but cannot perfectly describe each of them: this is especially the case of lighter atoms for which
+the quantum shell structures of the nucleus should be taken into account.
 
 \subsection*{b}
 Since $B(A, Z) = \sum_i B_i(A_i, Z_i)$ one can calculate the contribution of the binding energy of the last neutron as 
