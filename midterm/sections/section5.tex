@@ -39,10 +39,58 @@ There are three possible alternatives for the first excited state, all of which 
 \end{enumerate}
 By looking at the suggested table, one can notice that the first excited state is described by configuration $3$, the second by configuration $1$ and the third excited state is described by configuration $2$.
 
+
 \begin{figure}
     \centering
     \begin{tikzpicture}
-        \foreach \x in {0.5, 2.5, 6, 8, 11.5, 13.5}{
+        
+        % Protons
+        \foreach \x in {0, 3}{
+            \foreach \y in {0, 1.25, 1.75, 2.75}{
+                \draw [thick] (\x, \y) -- ++(1.5, 0);
+            }
+            \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 0){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+1, 0)(1.5,0){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+1.5, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+1, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 1.75){};
+        }
+        \node[draw, circle, inner sep=2pt, fill] at (4, 1.75){};
+    \end{tikzpicture}
+    \caption{nothing}
+    \label{fig:nitrogen_nucleons_ground_state}
+\end{figure}
+
+
+\begin{figure}
+    \centering
+    \begin{tikzpicture}
+
+        % Protons
+        \foreach \x in {0.5, 6, 11.5}{
+            \foreach \y in {0, 1.25, 1.75, 2.75}{
+                \draw [thick] (\x, \y) -- ++(1.5, 0);
+            }
+            \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 0){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+1, 0)(1.5,0){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 1.25){};
+            \node[draw, circle, inner sep=2pt, fill] at (\x+1.5, 1.25){};
+        }
+        \node[draw, circle, inner sep=2pt, fill] at (1, 1.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (6.5, 2.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (12, 1.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (3.5, 2.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (9, 1.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (14.5, 1.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (1.5, 1.25){};
+        \node[draw, circle, inner sep=2pt, fill] at (7, 1.25){};
+        \node[draw, circle, inner sep=2pt, fill] at (12.5, 1.75){};
+
+        % Neutrons
+        \foreach \x in {2.5, 8, 13.5}{
             \foreach \y in {0, 1.25, 1.75, 2.75}{
                 \draw [thick] (\x, \y) -- ++(1.5, 0);
             }
@@ -54,10 +102,8 @@ By looking at the suggested table, one can notice that the first excited state i
             \node[draw, circle, inner sep=2pt, fill] at (\x+1.5, 1.25){};
             \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 1.75){};
         }
-        \node[draw, circle, inner sep=2pt, fill] at (3.5, 2.75){};
-        \node[draw, circle, inner sep=2pt, fill] at (9, 1.75){};
-        \node[draw, circle, inner sep=2pt, fill] at (14.5, 1.75){};
+
     \end{tikzpicture}
     \caption{nothing}
-    \label{fig:nitrogen_nucleons_states}
+    \label{fig:nitrogen_nucleons_excited_states}
 \end{figure}
