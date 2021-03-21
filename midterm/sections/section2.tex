@@ -38,5 +38,17 @@ Since $B(A, Z) = \sum_i B_i(A_i, Z_i)$ one can calculate the contribution of the
 \end{equation*}
 And using expression \ref{eq:semi_empirical_BE_formula} to calculate the two quantities one ends up with an estimation for the energy required to extract the neutron
 \begin{equation*}
-    B_{neutron} = B(A, Z) - B(A-1, Z) \approx 
+    B_{neutron} \approx 15.69~MeV/c^2
+\end{equation*}
+
+\subsection*{c}
+The most stable atom corresponds to the maximum point of the binding energy as a function of $Z$. One can find such point by imposing $\frac{dB(Z)}{dZ} = 0$. By the way 
+one problem arises, that is that the last therm of the binding energy depends on the value of $Z$ and we do not know it in advance. Hence the approach I chose was to set that term to 0 and
+find the maximum point $Z$ : this gives a non-integer term and the correct $Z$ is the one closer to this integer. Hence
+\begin{equation*}
+    0 = \frac{dB(Z)}{dZ} = \frac{a_c}{A^{1/3}} (2Z - 1) + \frac{4a_{symm}}{A} (A - 2Z)
+\end{equation*}
+leads to 
+\begin{equation*}
+    Z = \frac{a_c A^{2/3} - 4a_{symm}A}{2a_c A^{2/3} - 8a_{symm}} \simeq 
 \end{equation*}

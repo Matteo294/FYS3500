@@ -1,10 +1,3 @@
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[scale=0.8]{ex7/decay.eps}
-    \caption{Radioactive decay chain}
-    \label{fig:decay_chain}
-\end{figure}
-
 \subsection*{a}
 Said $N(t)$ the number of atoms present at time $t$, the radioactive decay law states that
 \begin{equation}
@@ -46,5 +39,68 @@ N_B(t) = e^{-\lambda_B t} \ \int_0^t N_0 e^{-(\lambda_A - \lambda_B) s} \, ds
 = \frac{N_0 \, e^{-\lambda_B t}}{\lambda_A - \lambda_B} \ \left(1 - e^{-(\lambda_A - \lambda_B) t}\right) = \\
 = N_0 \, \frac{e^{-\lambda_A t} - e^{-\lambda_B t}}{\lambda_B - \lambda_A}
 \end{gather*}
+
+\subsubsection*{b}
+Let us consider the single-decay law 
+\begin{equation*}
+    N(t) = N_0 e^{-\lambda t}
+\end{equation*}
+One can notice here that $\lambda$'s physical units are inverse of time. The time $t_{1/2}$ is defined as the time necessary to halve the number of atoms fro $N_0$. 
+This can be found by imposing $N(t) = N_0/2$ and solving for $t$ one obtains 
+\begin{equation*}
+    t_{1/2} = \frac{1}{\lambda} \, \log 2 \equiv \tau \log 2
+\end{equation*}
+where I introduced the mean lifetime $\tau \equiv 1/\lambda$. This last term, which has units of time, has a particular meaning. To understand this, one can first think 
+of 
+\begin{equation*}
+    p(t) = \frac{N(t)}{\int N(t) \, dt}
+\end{equation*} 
+as a probability distribution function related to the probability of a particle to decay. One can then calculate the expected lifetime of such particle
+\begin{equation*}
+    \left\langle t \right\rangle = \frac{\int t N(t) \, dt}{\int N(t) \, dt} = \frac{\int_0^{\infty} te^{-\lambda t} \, dt}{\int_0^{\infty} e^{-\lambda t}} = \frac{1}{\lambda}
+\end{equation*}
+and it is exactly $\tau$. \\
+Another interesting quantity is the natural decay width $\Gamma$. One can make plot the probability of a decay to occur as function of the decaying particle's energy: this is given by the
+Breit Wigner formula. The half width at half maximum of this distribution is the factor $\Gamma$ which has units of energy and is related to the average lifetime of the particle trough the 
+energy-time uncertainty relation
+\begin{equation*}
+    \Delta E \, \Delta t >= \frac{\hbar}{2}
+\end{equation*}
+EXPAND AND EXPLAIN BETTER HERE
+
+\subsubsection*{c}
+$1mCi = 37MBq$. Taking the solution
+\begin{equation*}
+    N_1(t) = N_0 \, e^{-\lambda t}
+\end{equation*}
+and imposing $\mathcal{A}(t=0) = -\frac{dN_1(t)}{dt}|_{t=0} = 37MBq$ one obtains
+\begin{equation*}
+    N_0 = \frac{37 MBq}{\lambda} \simeq 29689798324
+\end{equation*}
+
+\subsection*{d}
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.8]{ex7/decay.eps}
+    \caption{Radioactive decay chain}
+    \label{fig:decay_chain}
+\end{figure}
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[scale=0.8]{ex7/decay_activities.eps}
+    \caption{Radioactive decay chain}
+    \label{fig:decay_chain_activities}
+\end{figure}
+
+COMMENTS HERE
+
+\subsubsection*{e}
+The maximum activity of $^{139}$Ba is registered after $1.099$ hours (see script below).
+
+\subsubsection*{f}
+The activities of $^{139}$Cs and $^{139}$Ba becomes equal after $0.709$ hours (see script below)
+
+
 
 \lstinputlisting[language=python, showstringspaces=false]{ex7/ex7.py}
