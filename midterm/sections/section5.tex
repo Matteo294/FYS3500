@@ -81,12 +81,18 @@ By looking at the suggested table, one can notice that the first excited state i
             \node[draw, circle, inner sep=2pt, fill] at (\x+0.5, 1.25){};
             \node[draw, circle, inner sep=2pt, fill] at (\x+1.5, 1.25){};
         }
-        \node[draw, circle, inner sep=2pt, fill] at (1, 1.75){};
-        \node[draw, circle, inner sep=2pt, fill] at (6.5, 2.75){};
+        
+        % 1p 1/2 proton
+        \node[draw, circle, inner sep=2pt, fill] at (1, 2.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (6.5, 1.75){};
         \node[draw, circle, inner sep=2pt, fill] at (12, 1.75){};
-        \node[draw, circle, inner sep=2pt, fill] at (3.5, 2.75){};
-        \node[draw, circle, inner sep=2pt, fill] at (9, 1.75){};
+
+        % 1p 1/2 neutron
+        \node[draw, circle, inner sep=2pt, fill] at (3.5, 1.75){};
+        \node[draw, circle, inner sep=2pt, fill] at (9, 2.75){};
         \node[draw, circle, inner sep=2pt, fill] at (14.5, 1.75){};
+
+        % 1p 3/2 proton
         \node[draw, circle, inner sep=2pt, fill] at (1.5, 1.25){};
         \node[draw, circle, inner sep=2pt, fill] at (7, 1.25){};
         \node[draw, circle, inner sep=2pt, fill] at (12.5, 1.75){};
@@ -109,3 +115,42 @@ By looking at the suggested table, one can notice that the first excited state i
     \caption{nothing}
     \label{fig:nitrogen_nucleons_excited_states}
 \end{figure}
+
+\subsection*{d}
+The third excited state is the one that has $J^p = \frac{3}{2}^-$. From this state the nucleus can decay into the second excited state, the first excited state and the ground state. 
+Let us first consider the decay to the ground state. When the excited proton returns to the $1p_{3/2}$ level there is no change in parity 
+and one has that $\Delta J = J_{exc} - J_{ground} = 1$. This means that one must have odd-L magnetic fields and even-L electric fields. \\
+Because of the general selection rules in the gamma decays one has that, said $L$ the photon's angular momentum
+\begin{gather*}
+    |J_{exc} - J_{ground}| \leq L \leq J_{exc} + J_{ground} \qquad \longrightarrow \qquad 1 \leq L \leq 2
+\end{gather*}
+The allowed states are
+\begin{equation*}
+    M_1, E_2
+\end{equation*}
+For $A=15$ one has that (ADD REFERENCE TO KRANE)
+\begin{equation}
+    \frac{\lambda(E_2)}{\lambda(M_1)} \approx 10^{-3}
+\end{equation}
+hence we expect the $M_1$ decay to be the most probable one, but with a non-neglectable contribution of $E_2$. \\
+In an analogous way one can find that for the decays to the second and first excited states the relations reported in table \ref{tab:gamma_transitions}.
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{cccccc}
+        \toprule
+        Transition & $\Delta E$ & $\Delta \pi$ & $L$ & Fields & Dominants\\
+        \midrule
+        $3 \to 0$ & $\approx 6.3~MeV$ & no & $1 \leq L \leq 2$ & $M_1, E_2$ & $M_1, E_2$ \\
+        $3 \to 1$ & $\approx 1~MeV$ & yes & $1 \leq L \leq 4$ & $E_1, M_2, E_3, M_4$ & $E_1$\\
+        $3 \to 2$ & $\approx 1~MeV$ & yes & $1 \leq L \leq 2$ & $E_1, M_2$ & $E_1$ \\
+        \bottomrule
+    \end{tabular}
+    \caption{}
+    \label{tab:gamma_transitions}
+\end{table}
+For the transition $2 \to 1$ one has that the dominant field is $E_2$ ($2 \leq L \leq 3$ and no parity change) while for the decay 
+$2 \to 0$ the dominant field is $E_1$ ($0 \leq L \leq 1$ and parity change). Hence from the second excited state the nucleus cand ecay to the ground state 
+via $E_1$ radiation, or it can decay to the first excited state via $E_2$ radiation. By comparing probabilities (REFERENCE TO KRANE)
+\begin{equation*}
+    \frac{P_{2 \to 0}}{P_{2 \to 1}} \approx \frac{\lambda(E_1)}{\lambda(E_2)} = \frac{1}{7.3} \cdot 10^{7} \cdot  A^{-2/3} > 1
+\end{equation*}
