@@ -1,54 +1,72 @@
 \subsection*{a}
 The mass of the atom is given by
 \begin{equation*}
-    M(^{48}\text{CA}) = Zm_P + (A-Z)m_N - \frac{B(A, Z)}{c^2}
+    M(^{48}_{20}\text{Ca}^{28}) = Z(m_p + m_e) + (A-Z)m_n - \frac{B(A, Z)}{c^2}
     \label{eq:semi_empirical_mass_formula}
 \end{equation*}
 where $B$ indicates the binding energy, which in turns can be calculated via the semi-empirical formula (atomic units)
 \begin{equation}
-    B(A, Z)= a_v A + a_s A^{2/3} + a_c \frac{Z(Z-1)}{A^{1/3}} - a_{sym} \frac{(A - 2Z)^2}{A} + \delta (A, Z)
+    B(A, Z)= a_v A - a_s A^{2/3} - a_c \frac{Z(Z-1)}{A^{1/3}} - a_{sym} \frac{(A - 2Z)^2}{A} + \delta (A, Z)
     \label{eq:semi_empirical_BE_formula}
 \end{equation}
 where 
 \begin{equation*}
     \delta(A, Z) = 
     \begin{cases}
-        \frac{a_P}{A^{3/4}} \qquad \text{if Z and N are even} \\
+        \frac{a_P}{A^{1/2}} \qquad \text{if Z and N are even} \\
         0 \qquad \text{if A is odd} \\
-        -\frac{a_P}{A^{3/4}} \qquad \text{if Z and N are odd} 
+        -\frac{a_P}{A^{1/2}} \qquad \text{if Z and N are odd} 
     \end{cases}
 \end{equation*}
 One can simply pop in the values of $A$ and $Z$ into the formula using the fitted coefficients (source Wikipedia) in units of $MeV/c^2$
 \begin{equation*}
     a_v = 15.8 \qquad a_s = 18.3 \qquad a_c = 0.714 \qquad a_{sym} = 23.2 \qquad a_P = 12
 \end{equation*}
-and obtains $B(A, Z) = 621.71~MeV/c^2$. Hence, inserting the result into \ref{eq:semi_empirical_mass_formula} one obtains
+and obtains $B(A, Z) = 412.84~MeV/c^2$. Hence, inserting the result into \ref{eq:semi_empirical_mass_formula} one obtains
 \begin{equation*}
-    M(^{48}\text{Ca}) \simeq 44451.55~MeV/c^2 \simeq 47.3~u
+    M(^{48}\text{Ca}) \simeq 44670.64~MeV/c^2 \simeq 47.96~u
 \end{equation*}
-Even though the result is closet to the experimental value there is a small difference. One can justify this difference by observing that the SEMF is 
+Thhe result is close to the experimental value ($47.952)$. One could justify eventual differences by observing that the SEMF is 
 not a complete theoretical model, but rather a fit to experimental data of a model with some theoretical fundations. As such, it is reasonable that the model
 can give an overall good description of the data but cannot perfectly describe each of them: this is especially the case of lighter atoms for which
 the quantum shell structures of the nucleus should be taken into account.
 
 \subsection*{b}
-Since $B(A, Z) = \sum_i B_i(A_i, Z_i)$ one can calculate the contribution of the binding energy of the last neutron as 
+One can calculate the energy to remove a neutron as the difference in energy between the atom's state wth the neutron and without the neutron. The energy is the sum of
+two terms, one that take accounts of the mass of the particles and it is simply the sum of all the masses. The second term, instead, is the binding energy. In the initial and final
+state the mass energy contributions are the same (we are not making any particle disappear, we are just moving one away), hence the difference is only due to the binding energy contribution. One can
+calculate this contribution as
 \begin{equation*}
     B_{neutron} = B(A, Z) - B(A-1, Z)
 \end{equation*}
-And using expression \ref{eq:semi_empirical_BE_formula} to calculate the two quantities one ends up with an estimation for the energy required to extract the neutron
+and using expression \ref{eq:semi_empirical_BE_formula} with $A=44$ and $Z=20$ to calculate the two quantities one ends up with an estimation for the energy required to extract the neutron
 \begin{equation*}
-    B_{neutron} \approx 15.69~MeV/c^2
+    B_{neutron} \approx 11.14~MeV/c^2
 \end{equation*}
 
 \subsection*{c}
-The most stable atom corresponds to the maximum point of the binding energy as a function of $Z$. One can find such point by imposing $\frac{dB(Z)}{dZ} = 0$. By the way 
-one problem arises, that is that the last therm of the binding energy depends on the value of $Z$ and we do not know it in advance. Hence the approach I chose was to set that term to 0 and
-find the maximum point $Z$ : this gives a non-integer term and the correct $Z$ is the one closer to this integer. Hence
+One can search for the most stable atom with fixed $A$ searching for the minimum of the mass formula
 \begin{equation*}
-    0 = \frac{dB(Z)}{dZ} = \frac{a_c}{A^{1/3}} (2Z - 1) + \frac{4a_{symm}}{A} (A - 2Z)
+    M_A(Z) = Z(m_p + m_e) + (A-Z)m_n - B_A(Z)
 \end{equation*}
-leads to 
+Since one does not know if $Z$ is even or odd in advance, one can set the pairing term in the binding energy to $0$: this will lead to a non-integer $Z$ and 
+the true minimum value will be either the closest greater or smaller integer (one has to check which of the two has minimum energy).
+By direct calculation
 \begin{equation*}
-    Z = \frac{a_c A^{2/3} - 4a_{symm}A}{2a_c A^{2/3} - 8a_{symm}} \simeq 
+    0 = \frac{dM_A}{dZ} = m_p + m_e - m_n - \frac{a_c}{A^{1/3}} \left(A-2Z\right) + 4\frac{a_{symm}}{A} \left(A-2Z\right)
 \end{equation*}
+and rearranging terms
+\begin{equation*}
+    Z = \frac{m_n - (m_p + m_e) + 4a_{symm}A + a_c A^{2/3}}{2a_c A^{2/3} + 8a_{symm}} \approx 56.59 \qquad \longrightarrow \qquad Z = 56
+\end{equation*}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{ex2/evenA.eps}
+    \caption{Even A}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[scale=0.5]{ex2/oddA.eps}
+    \caption{Odd A}
+\end{figure}
