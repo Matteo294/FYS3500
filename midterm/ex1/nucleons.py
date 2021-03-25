@@ -21,7 +21,7 @@ def B(A, Z):
     elif A%2 == 0 and Z%2 == 1:
         delta = -a_p/np.sqrt(A)
     return + a_v*A - a_s*A**(2/3) - a_c*Z*(Z-1)/A**(1/3) - a_symm*(A-2*Z)**2/A + delta
-
+print(B(64, 30)/64)
 def Coulomb(r, a=1):
     return a/r
 

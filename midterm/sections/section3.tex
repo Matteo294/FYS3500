@@ -31,46 +31,37 @@ and by rearrangin terms
 \begin{gather*}
     p_Z^2 = (E_{e^+} + E_{e^-})^2 - m_Z^2
 \end{gather*}
-this equation gives the value of the momentum that the $Z$ boson must have in order to satisfy the conservation of the energy.
-By explicit calculation for the $4$ cases, inserting the \href{https://en.wikipedia.org/wiki/W_and_Z_bosons}{Z boson mass}, one obtains 
+Every physical particle satisfies this relation, and virtual particles do not (that is why they are called "off-shell"). Hence one can assume the true mass of $Z$ and check if the corresponding 
+momentum satisfies this relation (or it is "on-shell") or, equivalently, can assume the momentum by the conservation law and calculate the mass through the last relation 
+which should results greater or equal than the true mass. I chose the first approach.
+By explicit calculation for the $4$ cases, inserting the experimental value of the \href{https://en.wikipedia.org/wiki/W_and_Z_bosons}{Z boson mass}, one obtains 
 \begin{enumerate}
     \item $p_Z^2 \simeq -2414~GeV/c$
     \item $p_Z^2 \simeq -7350~GeV/c$
     \item $p_Z^2 \simeq 744~GeV/c$
     \item $p_Z^2 \simeq  -5872~GeV/c$
 \end{enumerate}
-hence only in the third case the particle can be regarded as physical and not virtual.
+hence only in the third case (that is the one presented in the text of the exercise) the particle can be regarded as physical and not virtual.
 
 \subsection*{c}
-The invariant mass $W$ in the center of mass frame when the two $Z$ boson are generated is
-\begin{equation*}
-    W = \sqrt{E_Z + E_{Z^*}} = \sqrt{ \sqrt{p_Z^2 + m_Z^2} + \sqrt{p_Z^2 + m_{Z^*}^2}}
-\end{equation*}
-where I used the fact that $\ve p_Z = \ve p_{Z^*}$ by definition of center of mass. But for what told before $W=m_H$ hence, by squaring last equation 
-\begin{equation*}
-    m_H^2 = \sqrt{p_Z^2 + m_Z^2} + \sqrt{p_Z^2 + m_{Z^*}^2}
-\end{equation*}
-or
-\begin{equation*}
-    m_H^4 + p_Z^2 + m_Z^2 - 2m_H^2\sqrt{p_Z^2 + m_Z^2} = p_Z^2 + m_{Z^*}^2
-\end{equation*}
-which in turns leads to
-\begin{equation*}
-    p_Z^2 = \frac{m_H^2}{4} - m_Z^2
-\end{equation*}
-Hence the two energies are
+The three equations needed to solve the problem are the invariance of the invariant mass $W$ and the shell relation $E^2 = p^2 + m^2$. 
+More specifically
+\begin{equation*}\begin{cases}
+    m_H = E_Z + E_{Z^*} \\
+    E_Z^2 = m_Z^2 + p_Z^2 \\
+    E_{Z^*}^2 = m_{Z^*}^2 + p_Z^2
+\end{cases}\end{equation*}
+this system can be solved for $E_Z, E_{Z^*}, p_Z$ and the two energies are
 \begin{gather*}
-    E_Z = \sqrt{p_Z^2 + m_Z^2} = \frac{m_H}{2} \\
-    E_{Z^*} = \sqrt{p_Z^2 + m_{Z^*}^2} = \frac{m_H}{2} = \sqrt{m_H^2 + m_{Z^*}^2 - m_Z^2}
+    E_{Z^*} = \frac{m_H^2 + m_{Z^*}^2 - m_Z}{2m_H} \\
+    E_Z = m_H - \frac{m_H^2 + m_{Z^*}^2 - m_Z}{2m_H}
 \end{gather*}
-and one can notice that if $m_Z = m_{Z^*}$ the energy of the Higgs boson $m_H$ is equally divided between the two Z bosons.
 
 \subsection*{d}
-Every quantity can in principle be computed by the conservation of $4-momentum$, a rule that holds always also for virtual particles. This means that 
+Every quantity can in principle be computed by the conservation of $4-$momentum. This means that 
 all the four components must be conserved in each step of the process and in the center of mass frame this means that
 \begin{equation*}
     (m_H, \ve 0) = (E_Z + E_{Z^*} \, , \, \ve p_Z + \ve p_{Z^*}) = \left(\sum_i E_i \, , \sum_i \ve{p}_i \right)
 \end{equation*}
-where the last summation index runs over the electrons. In addition, for each particle, one can use the shell relation $E = \sqrt{p^2 + m^2}$:
-note that this relation holds for physical particles and not virtual particles (which are indeed called off-shell). However the relation can become 
-true with a mass which is not the true mass of the particle but the one that comes from the $4$-momentum components conservation (analogous discussion for the moment).
+where the last summation index runs over the electrons. In addition, for each particle, one can use the shell relation $E = \sqrt{p^2 + m^2}$.
+All this equations can be put together and the system of equation can be solved for the energies of the electrons.
