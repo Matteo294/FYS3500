@@ -5,13 +5,13 @@ In the resting frame of the Higgs boson the invariant mass is (atomic units)
     \label{eq:W_Higgs_frame}
 \end{equation}
 The invariant mass is a Lorent invariant, hence this quantity is the same that one observer would measure in the laboratory frame. 
-More specifically, one can calculate $W$ after the process using the electrons data
+More specifically, one can calculate $W$ after the process using the electrons data (laboratory frame)
 \begin{equation*}
-    W = \sqrt{(\sum_i E_i)^2 - |\sum \ve{p}_i|^2} = \sqrt{(\sum_i E_i)^2} = \sum \sqrt{m_i^2 + p_i^2}
+    W = \sqrt{(\sum_i E_i)^2 - |\sum \ve{p}_i|^2}
 \end{equation*}
 By equating this expression to \ref{eq:W_Higgs_frame} and inserting the given values together with the electrons mass one obtains
 \begin{equation*}
-    m_h \simeq 126.2~GeV/c^2
+    m_h \simeq 125.20~GeV/c^2
 \end{equation*}
 
 \subsubsection*{b}
@@ -32,7 +32,7 @@ and by rearrangin terms
     p_Z^2 = (E_{e^+} + E_{e^-})^2 - m_Z^2
 \end{gather*}
 this equation gives the value of the momentum that the $Z$ boson must have in order to satisfy the conservation of the energy.
-By explicit calculation for the $4$ cases one obtains 
+By explicit calculation for the $4$ cases, inserting the \href{https://en.wikipedia.org/wiki/W_and_Z_bosons}{Z boson mass}, one obtains 
 \begin{enumerate}
     \item $p_Z^2 \simeq -2414~GeV/c$
     \item $p_Z^2 \simeq -7350~GeV/c$
@@ -42,4 +42,26 @@ By explicit calculation for the $4$ cases one obtains
 hence only in the third case the particle can be regarded as physical and not virtual.
 
 \subsection*{c}
+The invariant mass $W$ in the center of mass frame when the two $Z$ boson are generated is
+\begin{equation*}
+    W = \sqrt{E_Z + E_{Z^*}} = \sqrt{ \sqrt{p_Z^2 + m_Z^2} + \sqrt{p_Z^2 + m_{Z^*}^2}}
+\end{equation*}
+where I used the fact that $\ve p_Z = \ve p_{Z^*}$ by definition of center of mass. But for what told before $W=m_H$ hence, by squaring last equation 
+\begin{equation*}
+    m_H^2 = \sqrt{p_Z^2 + m_Z^2} + \sqrt{p_Z^2 + m_{Z^*}^2}
+\end{equation*}
+or
+\begin{equation*}
+    m_H^4 + p_Z^2 + m_Z^2 - 2m_H^2\sqrt{p_Z^2 + m_Z^2} = p_Z^2 + m_{Z^*}^2
+\end{equation*}
+which in turns leads to
+\begin{equation*}
+    p_Z^2 = \frac{m_H^2}{4} - m_Z^2
+\end{equation*}
+Hence the two energies are
+\begin{equation*}
+    E_Z = \sqrt{p_Z^2 + m_Z^2} = \frac{m_H}{2} \\
+    E_{Z^*} = \sqrt{p_Z^2 + m_{Z^*}^2} = \frac{m_H}{2} = \sqrt{m_H^2 + m_{Z^*}^2 - m_Z^2}
+\end{equation*}
+and one can notice that if $m_Z = m_{Z^*}$ the energy of the Higgs boson $m_H$ is equally divided between the two Z bosons.
 \subsection*{d}

@@ -60,13 +60,21 @@ as a probability distribution function related to the probability of a particle 
     \left\langle t \right\rangle = \frac{\int t N(t) \, dt}{\int N(t) \, dt} = \frac{\int_0^{\infty} te^{-\lambda t} \, dt}{\int_0^{\infty} e^{-\lambda t}} = \frac{1}{\lambda}
 \end{equation*}
 and it is exactly $\tau$. \\
-Another interesting quantity is the natural decay width $\Gamma$. One can make plot the probability of a decay to occur as function of the decaying particle's energy: this is given by the
-Breit Wigner formula. The half width at half maximum of this distribution is the factor $\Gamma$ which has units of energy and is related to the average lifetime of the particle trough the 
+Another interesting quantity is the natural decay width $\Gamma$. One can make plot the probability of a decay to occur as function of the decaying particle's energy: this function is peaked around
+a most probable value $E_0$ with a distribution described by the Breit Wigner formula. The half width at half maximum of this distribution is the factor $\Gamma$ which has units of energy and is related to the average 
+lifetime of the particle trough the relation
 energy-time uncertainty relation
 \begin{equation*}
-    \Delta E \, \Delta t >= \frac{\hbar}{2}
+    \Delta E \cdot \delta t \approx \frac{\hbar}{2}
 \end{equation*}
-EXPAND AND EXPLAIN BETTER HERE
+which in this particular case reads
+\begin{equation*}
+    \frac{\Gamma}{2} \cdot \tau \approx \frac{\hbar}{2}
+\end{equation*}
+or 
+\begin{equation*}
+    \tau \approx \frac{\hbar}{\gamma}
+\end{equation*}
 
 \subsubsection*{c}
 $1mCi = 37MBq$. Taking the solution
@@ -99,4 +107,4 @@ COMMENTS HERE
 The maximum activity of $^{139}$Ba is registered after $1.099$ hours (see script below).
 
 \subsubsection*{f}
-The activities of $^{139}$Cs and $^{139}$Ba becomes equal after $0.709$ hours (see script below)
+The activities of $^{139}$Cs and $^{139}$Ba becomes equal after $0.709$ hours (see script below).
