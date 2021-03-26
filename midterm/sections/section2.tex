@@ -26,13 +26,13 @@ and obtains $B(A, Z) = 412.84~MeV/c^2$. Hence, inserting the result into \ref{eq
 \begin{equation*}
     M(^{48}\text{Ca}) \simeq 44670.64~MeV/c^2 \simeq 47.96~u
 \end{equation*}
-Thhe result is close to the experimental value ($47.952)$. One could justify eventual differences by observing that the SEMF is 
+The result is close to the experimental value ($47.952)$. One could justify eventual differences by observing that the SEMF is 
 not a complete theoretical model, but rather a fit to experimental data of a model with some theoretical fundations. As such, it is reasonable that the model
 can give an overall good description of the data but cannot perfectly describe each of them: this is especially the case of lighter atoms for which
 the quantum shell structures of the nucleus should be taken into account.
 
 \subsection*{b}
-One can calculate the energy to remove a neutron as the difference in energy between the atom's state wth the neutron and without the neutron. The energy is the sum of
+One can calculate the energy to remove a neutron as the difference in energy between the atom's state with the neutron and without the neutron. The energy is the sum of
 two terms, one that take accounts of the mass of the particles and it is simply the sum of all the masses. The second term, instead, is the binding energy. In the initial and final
 state the mass energy contributions are the same (we are not making any particle disappear, we are just moving one away), hence the difference is only due to the binding energy contribution. One can
 calculate this contribution as
@@ -41,7 +41,7 @@ calculate this contribution as
 \end{equation*}
 and using expression \ref{eq:semi_empirical_BE_formula} with $A=44$ and $Z=20$ to calculate the two quantities one ends up with an estimation for the energy required to extract the neutron
 \begin{equation*}
-    B_{neutron} \approx 11.14~MeV/c^2
+    \Delta E_{neutron} \approx 11.14~MeV/c^2
 \end{equation*}
 
 \subsection*{c}
@@ -59,14 +59,22 @@ and rearranging terms
 \begin{equation*}
     Z = \frac{m_n - (m_p + m_e) + 4a_{symm}A + a_c A^{2/3}}{2a_c A^{2/3} + 8a_{symm}} \approx 56.59 \qquad \longrightarrow \qquad Z = 56
 \end{equation*}
-
-\begin{figure}[h]
+Figures \ref{fig:even} and \ref{fig:odd} report a plot of the nuclus masses as a function of the atomic number $Z$ for fixed $A$ using the mass 
+semi-empirical formula. The odd A plot contains only one parabola, while the even A plot contains two parabolas: this is becaus of the pairing term in the 
+MSEF, which is either positive if $Z$ is even or negative if $Z$ is odd. In both cases, atoms which do not lie in the minimum tend to decay via $\beta$-decay towards
+the most stable configuration (the minimum of the parabola) by changing neutrons into protons and vice-versa. 
+\begin{figure}
     \centering
-    \includegraphics[scale=0.5]{ex2/evenA.eps}
-    \caption{Even A}
-\end{figure}
-\begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{ex2/oddA.eps}
-    \caption{Odd A}
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[scale=0.42]{ex2/evenA.eps}
+        \caption{Even A}
+        \label{fig:even}
+    \end{minipage}
+    \hspace{0.1\textwidth}
+    \begin{minipage}{0.4\textwidth}
+        \includegraphics[scale=0.4]{ex2/oddA.eps}
+        \caption{Odd A}
+        \label{fig:odd}
+    \end{minipage}
+    
 \end{figure}

@@ -1,17 +1,14 @@
 \subsection*{a}
-In the resting frame of the Higgs boson the invariant mass is (atomic units)
-\begin{equation}
-    W = \sqrt{(\sum_i E_i)^2 - |\sum \ve{p}_i|^2} = E_H = m_H
-    \label{eq:W_Higgs_frame}
-\end{equation}
-The invariant mass is a Lorent invariant, hence this quantity is the same that one observer would measure in the laboratory frame. 
-More specifically, one can calculate $W$ after the process using the electrons data (laboratory frame)
+In the resting frame of the Higgs boson the invariant mass is simply the Higgs boson mass $m_H$.
+The invariant mass is a Lorentz invariant, hence this quantity is the same in the laboratory frame. 
+More specifically, one can calculate $W$ at the end of the process using the electrons data (laboratory frame)
 \begin{equation*}
     W = \sqrt{(\sum_i E_i)^2 - |\sum \ve{p}_i|^2}
 \end{equation*}
-By equating this expression to \ref{eq:W_Higgs_frame} and inserting the given values together with the electrons mass one obtains
+where the summation index $i$ runs over all the electrons.
+By equating this expression to $m_H$ and inserting the given values together with the electrons' masses, one obtains
 \begin{equation*}
-    m_h \simeq 125.20~GeV/c^2
+    m_H \simeq 125.20~GeV/c^2
 \end{equation*}
 
 \subsubsection*{b}
@@ -23,17 +20,21 @@ In other words there are $4$ different ways to combine the couples of electron-p
     \item $Z \rightarrow e^+_2 + e^-_1, \quad Z^* \rightarrow e^+_1 + e^-_2$
     \item $Z \rightarrow e^+_2 + e^-_2, \quad Z^* \rightarrow e^+_1 + e^-_1$
 \end{enumerate}
-One can now impose the conservation of the $4-$momentum in the bosons' decay and in particular, for the $Z$ boson, this means 
+One can now impose the conservation of the $4-$momentum in the decay and, in particular for the $Z$ boson, this means 
 \begin{gather*}
-    E_Z = \sqrt{m_Z^2 + p_Z^2} = E_{e^+} + E_{e^-} = \sqrt{m_{e^+}^2 + p_{e^+}^2} + \sqrt{m_{e^-}^2 + p_{e^-}^2} \\
+    E_Z = \sqrt{m_Z^2 + p_Z^2} = E_{e^+} + E_{e^-} \\
 \end{gather*}
 and by rearrangin terms
 \begin{gather*}
     p_Z^2 = (E_{e^+} + E_{e^-})^2 - m_Z^2
 \end{gather*}
-Every physical particle satisfies this relation, and virtual particles do not (that is why they are called "off-shell"). Hence one can assume the true mass of $Z$ and check if the corresponding 
-momentum satisfies this relation (or it is "on-shell") or, equivalently, can assume the momentum by the conservation law and calculate the mass through the last relation 
-which should results greater or equal than the true mass. I chose the first approach.
+where 
+\begin{equation*} 
+    E_{e^+} + E_{e^-} = \sqrt{m_{e^+}^2 + p_{e^+}^2} + \sqrt{m_{e^-}^2 + p_{e^-}^2}
+\end{equation*}
+Every physical particle satisfies these relation with their physical mass but virtual particles do not (that is why they are called "off-shell"). Hence one can assume the true mass of $Z$ and check if the corresponding 
+momentum satisfies this relation (or if it is "on-shell") or, equivalently, one can assume the momentum by the conservation law and calculate the mass through the last relation 
+which should result greater or equal than the true mass. I chose the first approach.
 By explicit calculation for the $4$ cases, inserting the experimental value of the \href{https://en.wikipedia.org/wiki/W_and_Z_bosons}{Z boson mass}, one obtains 
 \begin{enumerate}
     \item $p_Z^2 \simeq -2414~GeV/c$
@@ -53,8 +54,8 @@ More specifically
 \end{cases}\end{equation*}
 this system can be solved for $E_Z, E_{Z^*}, p_Z$ and the two energies are
 \begin{gather*}
-    E_{Z^*} = \frac{m_H^2 + m_{Z^*}^2 - m_Z}{2m_H} \\
-    E_Z = m_H - \frac{m_H^2 + m_{Z^*}^2 - m_Z}{2m_H}
+    E_{Z^*} = \frac{m_H^2 + m_{Z^*}^2 - m_Z^2}{2m_H} \\
+    E_Z = m_H - \frac{m_H^2 + m_{Z^*}^2 - m_Z^2}{2m_H}
 \end{gather*}
 
 \subsection*{d}
@@ -63,5 +64,5 @@ all the four components must be conserved in each step of the process and in the
 \begin{equation*}
     (m_H, \ve 0) = (E_Z + E_{Z^*} \, , \, \ve p_Z + \ve p_{Z^*}) = \left(\sum_i E_i \, , \sum_i \ve{p}_i \right)
 \end{equation*}
-where the last summation index runs over the electrons. In addition, for each particle, one can use the shell relation $E = \sqrt{p^2 + m^2}$.
-All this equations can be put together and the system of equation can be solved for the energies of the electrons.
+where the last summation index runs over the electrons. In addition, for each physical particle, one can use the shell relation $E = \sqrt{p^2 + m^2}$.
+All these equations can be put together and the system of equations can be solved for the energies of the electrons.

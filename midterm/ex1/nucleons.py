@@ -12,7 +12,7 @@ a_p = 12
 mp = 938.272 # Proton mass in MeV/c^2
 me = 0.511 # Electron mass in MeV/c^2
 mn = 939.565 # Neutron mass in MeV/c^2
-MeV_to_u = 931.5 # conversion factor from MeV/c^2 to atomic mass units (divide)
+MeV_to_u = 931.5 # conv factor from MeV/c^2 to atomic units (divide)
 
 def B(A, Z):
     delta = 0
@@ -20,17 +20,25 @@ def B(A, Z):
         delta = a_p/np.sqrt(A)
     elif A%2 == 0 and Z%2 == 1:
         delta = -a_p/np.sqrt(A)
-    return + a_v*A - a_s*A**(2/3) - a_c*Z*(Z-1)/A**(1/3) - a_symm*(A-2*Z)**2/A + delta
-print(B(64, 30)/64)
+    return + a_v*A-a_s*A**(2/3)-a_c*Z*(Z-1)/A**(1/3)-a_symm*(A-2*Z)**2/A+delta
+
 def Coulomb(r, a=1):
     return a/r
 
+def protonPotential(r, a=1):
+    if r<0.5:
+        return 100
+    elif r<5:
+        return Coulomb(r, a) - 10
+    else:
+        return Coulomb(r, a)
+
 # Repulsion vertical line
 repulsion = (1000, -10)
-xrepulsion = (2, 2)
+xrepulsion = (0.5, 0.5)
 # Well horizontal line
 well = (-10, -10)
-xwell = (2, 5)
+xwell = (0.5, 5)
 # Attraction vertical line
 attraction = (-10, 0)
 xattraction = (5, 5)
@@ -39,13 +47,19 @@ horiz = (0, 0)
 xhoriz = (5, 100)
 # Coulomb curve
 xline = np.linspace(0.01, 100, 1000)
-yline = Coulomb(xline, a=25)
+yline = Coulomb(xline, a=10)
+# Proton potential
+zline = [protonPotential(xx, a=10) for xx in xline]
 
-plt.plot(xrepulsion, repulsion, color='dodgerblue', label="Nucleon interaction")
-plt.plot(xwell, well, color='dodgerblue')
-plt.plot(xattraction, attraction, color='dodgerblue')
-plt.plot(xhoriz, horiz, color='dodgerblue')
-plt.plot(xline, yline, color='sandybrown', label='Coulomb interaction')
+plt.plot(xrepulsion, repulsion, color='dodgerblue', 
+        label="Nuclear potential", linewidth=2.0)
+plt.plot(xwell, well, color='dodgerblue', linewidth=2.0)
+plt.plot(xattraction, attraction, color='dodgerblue', linewidth=2.0)
+plt.plot(xhoriz, horiz, color='dodgerblue', linewidth=2.0)
+plt.plot(xline, yline, color='sandybrown', 
+            label='Coulomb potential', linewidth=2.0)
+plt.plot(xline, zline, '--', color='gray', 
+            label='Proton interaction', linewidth=2.0)
 plt.legend(fontsize=14)
 plt.xlim(0, 15)
 plt.ylim(-15, 30)

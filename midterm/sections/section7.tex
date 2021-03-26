@@ -21,23 +21,23 @@ one can immediately obtain the number of $A$ atoms as a function of time by appl
 To study the number of atoms of type $B$ one has to take account of two factors: the number of "created" atoms by means of $A$'s decay, and
 the number of atoms decayed into $C$. This means that the radioactive law reads 
 \begin{equation*}
-    N_B(t) = -\frac{1}{\lambda_B}\frac{dN_B(t)}{dt} + N_{A \to B}(t)
+    \frac{dN_B(t)}{dt} = -\lambda_B N_N(t) + \lambda_A N_{A \to B}(t)
 \end{equation*}
-where the first term takes account of the fact on the right side member represents the $B$'s decay and the the last term 
-represents the number of $B$ obtained by $A$'s decaying. \\
+where the first term on the right side member represents the $B$'s decay and the the last term 
+takes account of the number of $B$'s obtained by $A$'s decay. \\
 One can now substitute \ref{eq:decay_chain_first_atom} obtaining 
 \begin{equation*}
-    \frac{dN_B(t)}{dt} + \lambda_B N_B(t) =  N_0 \, e^{-\lambda_A t}
+    \frac{dN_B(t)}{dt} + \lambda_B N_B(t) =  \lambda_A N_0 \, e^{-\lambda_A t}
 \end{equation*}
 The general solution of this differential equation is 
 \begin{equation*}
-    N_B(t) = e^{-A(t)} \ \left(N_B(0) + \int_0^t N_0 e^{-\lambda_A s} e^{A(s)} \, ds \right)
+    N_B(t) = e^{-A(t)} \ \left(N_B(0) + \int_0^t \lambda_A N_0 e^{-\lambda_A s} e^{A(s)} \, ds \right)
 \end{equation*}
 where $A(s) = \lambda_B \int dt = \lambda_B t$. Hence
 \begin{gather*}
-N_B(t) = e^{-\lambda_B t} \ \int_0^t N_0 e^{-(\lambda_A - \lambda_B) s} \, ds 
-= \frac{N_0 \, e^{-\lambda_B t}}{\lambda_A - \lambda_B} \ \left(1 - e^{-(\lambda_A - \lambda_B) t}\right) = \\
-= N_0 \, \frac{e^{-\lambda_A t} - e^{-\lambda_B t}}{\lambda_B - \lambda_A}
+N_B(t) = \lambda_A e^{-\lambda_B t} \ \int_0^t N_0 e^{-(\lambda_A - \lambda_B) s} \, ds 
+= \frac{N_0 \lambda_A \, e^{-\lambda_B t}}{\lambda_A - \lambda_B} \ \left(1 - e^{-(\lambda_A - \lambda_B) t}\right) = \\
+= N_0 \, \lambda_A \, \frac{e^{-\lambda_A t} - e^{-\lambda_B t}}{\lambda_B - \lambda_A}
 \end{gather*}
 
 \subsubsection*{b}
@@ -65,7 +65,7 @@ a most probable value $E_0$ with a distribution described by the Breit Wigner fo
 lifetime of the particle trough the relation
 energy-time uncertainty relation
 \begin{equation*}
-    \Delta E \cdot \delta t \approx \frac{\hbar}{2}
+    \Delta E \cdot \Delta t \approx \frac{\hbar}{2}
 \end{equation*}
 which in this particular case reads
 \begin{equation*}
@@ -85,26 +85,38 @@ and imposing $\mathcal{A}(t=0) = -\frac{dN_1(t)}{dt}|_{t=0} = 37MBq$ one obtains
 \begin{equation*}
     N_0 = \frac{37 MBq}{\lambda} \simeq 29689798324
 \end{equation*}
-
+In this exercise I found some ambiguity with the definition of the activity in a decay chain. In fact, for a single decay, it is always true that 
+\begin{equation}
+    \frac{dN}{dt} = - \lambda N
+    \label{eq:decay_law}
+\end{equation}
+hence one can calculate the activity both as $-\frac{dN}{dt}$ or $-\lambda N$. But when it comes to 
+decay chains, it is not anymore true that for each species a relation as \ref{eq:decay_law} sussists, hence there are two possible definitions of the activity. Marting and Shaw (chapter 1.6.4 third edition)
+defines tha activity as $\mathcal{A} = -\frac{dN}{dt}$, but other sources, such as \href{https://en.wikipedia.org/wiki/Radioactive_decay#Rates}{this}, use $\mathcal{A} = -\lambda N$ as definition. I chose to attach to the latter.
 \subsection*{d}
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.8]{ex7/decay.eps}
-    \caption{Radioactive decay chain}
+    \caption{Number of atoms as a function of time in the decay chain}
     \label{fig:decay_chain}
 \end{figure}
 
 \begin{figure}[htbp]
     \centering
     \includegraphics[scale=0.8]{ex7/decay_activities.eps}
-    \caption{Radioactive decay chain}
+    \caption{Activities as a function of time in the decay chain}
     \label{fig:decay_chain_activities}
 \end{figure}
 
-COMMENTS HERE
+Figures \ref{fig:decay_chain} and \ref{fig:decay_chain_activities} report respectively
+the number of atoms and the activities as functions of time. Of course at time $t=0$ the only present nuclei are $^{139}$Cs, and as the time passes 
+the number of $^{139}$Cs nuclei decreases, while the two other elements start forming in chain. The activity of the first reaction is proportional to the 
+the number of atoms of $^{139}$Cs, hence it is logical that the maximum activity of the first reaction is at the beginning of the simulation. For what concerns
+$^{139}$Ba, the activity grows as more $^{139}$Ba atoms are produced but a certain point the rate of production of $^{139}$La overcomes the rate of decay of $^{139}$Cs,
+and the $^{139}$Ba activity starts decreasing. Finally, the activity of $^{139}$La is always $0$ because no decays are observed
 
 \subsubsection*{e}
-The maximum activity of $^{139}$Ba is registered after $1.099$ hours (see script below).
+The maximum activity of $^{139}$Ba is registered after $33$ minutes, with a maximum value of $3.1391~MBq = 0.0848~mCi$.
 
 \subsubsection*{f}
-The activities of $^{139}$Cs and $^{139}$Ba becomes equal after $0.709$ hours (see script below).
+The activities of $^{139}$Cs and $^{139}$Ba become equal after $0.33$ minutes (see script below), that is in the peak of the activity of  $^{139}$Ba.

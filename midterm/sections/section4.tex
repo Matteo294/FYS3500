@@ -17,7 +17,7 @@ represented by the two Feynman diagrams \\
         \caption{Feynman diagram for the reaction $\mu^- \rightarrow e^- \, \bar\nu_e \, \nu_{\mu}$}
     \end{minipage}
 \end{figure}
-The probability for a particle to get scattered by a certain potential is proportional to the squared so called \emph{amplitude} $\mathcal{M}$.
+The probability for a particle to get scattered by a certain potential is proportional to the squared of the so called \emph{amplitude} $\mathcal{M}$.
 Assuming that the coupling constant $g^2$ of the Yukawa potential (atomic units)
 \begin{equation*}
     V(r) = -\frac{g^2}{4\pi} \frac{e^{-r/R}}{r}
@@ -28,14 +28,14 @@ is small compared to $4\pi$ (this means that the potential can be considered as 
 \end{equation*}
 where $\ve{p} = \ve{p}_i - \ve{p}_f$ denotes the momentum difference between the initial and final state. By direct computation one can prove that 
 \begin{equation}
-    \mathcal{M}(\ve q) = \mathcal{M}(q^2) = - \frac{g^2}{p^2 + m_x^2}
+    \mathcal{M}(\ve p) = \mathcal{M}(p^2) = - \frac{g^2}{p^2 + m_x^2}
     \label{eq:amplitude_born}
 \end{equation}
 where $m_x$ denotes the mass of the propagator. A multiplicative factor of $\sqrt{2}$ must be added if the spin interaction is taken into account. \\
 In addition, the force carrier that governs the interaction is the $W$ boson, the mass of which is many times bigger than all the other involved masses. Hence a more suitable form of 
 \ref{eq:amplitude_born} is 
 \begin{equation*}
-    \mathcal{M}(\ve p) = \mathcal{M}(p^2) = - \sqrt{2} \, \frac{g^2}{m_x^2} \approx 1.166 \cdot 10^{-5}~(GeV)^{-2} \equiv G:F
+    \mathcal{M}(\ve p) = \mathcal{M}(p^2) = - \sqrt{2} \, \frac{g^2}{m_x^2} \approx 1.166 \cdot 10^{-5}~(GeV)^{-2} \equiv G_F
 \end{equation*}
 and $G_F$ is the Fermi coupling constant.
 This results is known as \emph{leptons universality} and states that the amplitude of a lepton's decay process is a constant that does not depend on the chosen lepton. \\
@@ -43,8 +43,8 @@ At this point one can introduce the decay rate $\Gamma$ which is proportional to
 \begin{equation*}
     \Gamma \approx K M^2 A
 \end{equation*}
-where $A$ is a constant whose units are those of an energy to the fifth power, because $[M^2] = (GeV)^{-2}$. Since we expect the decay rate 
-to depend on the generating particle, a reasonable choice for $A$ is $A=m_i^5$ where $m_i$ denotes the mass of the generating particle. Hence
+where $A$ is a constant whose units are those of an energy to the fifth power, because $[M^2] = (GeV)^{-4}$. Since we expect the decay rate 
+to depend on the generating particle, a reasonable choice for $A$ is $A=m_i^5$ where indeed $m_i$ denotes the mass of the generating particle. Hence
 \begin{equation*}
     \Gamma \approx - \sqrt{2} K \, \frac{g^2}{m_x^2}m_i^5
 \end{equation*}

@@ -15,8 +15,9 @@ def Energy(p, m):
     return np.sqrt(m**2+ norm3(p)**2)
 
 en_Z = Energy(p2, m_e) + Energy(p4, m_e)
-print("Momentum of Z:", en_Z**2 - m_Z**2)
+print("Squared momentum of Z:", en_Z**2 - m_Z**2)
 
-Etot = np.sqrt( (Energy(p1, m_e) + Energy(p2, m_e) + Energy(p3, m_e) + Energy(p4, m_e))**2 - norm3(p1+p2+p3+p4)**2 )
+En_sum = Energy(p1, m_e) + Energy(p2, m_e) + Energy(p3, m_e) + Energy(p4, m_e)
+Etot = np.sqrt( (En_sum)**2 - norm3(p1+p2+p3+p4)**2 )
 
 print("Higgs boson mass:", Etot)

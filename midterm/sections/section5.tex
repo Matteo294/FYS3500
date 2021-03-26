@@ -20,7 +20,7 @@ describes the state of particle, and the state is an eigenstate of the parity op
 and $\pi$ is the (intrinsic) parity of the particle. \\
 Let us consider a system of two particles $A+B$ described by a wavefunction $\psi_{AB}(\ve{r}_A, \ve{r}_B)$. It can be proven that the parity of the system is given by 
 \begin{equation*}
-    \hat P |psi_{AB} = \pi_A \pi_B (-1)^l \psi_{AB}
+    \hat P \psi_{AB} = \pi_A \pi_B (-1)^l \psi_{AB}
 \end{equation*}
 where $l$ denotes the orbital angular momentum quantum number of the relative motion. Hence in a reaction of the type $A+B \rightarrow C+D$ described by a hamiltonian $\hat H$ that commutes with parity,
 parity is conserved or, in other words
@@ -32,7 +32,7 @@ This, for example, is not the case of the weak interaction where, in general, th
 
 \raggedright\emph{Charge conjugation} \\
 \vspace{10pt} 
-The charge conjugation operator is an operator that changes the sign of all the forces' quantum charges, specifically electric charge, baryon number, lepton number, flavor charges, isosping, \dots In particular, if applied to a particle, the C-parity operator 
+The charge conjugation operator is an operator that changes the sign of all the forces' quantum charges, specifically electric charge, baryon number, lepton number, flavor charges, isospin, \dots In particular, if applied to a particle, the C-parity operator 
 transforms the particle into its antiparticle. If a particle is in a state $\left| \psi \right\rangle$ then the action of the conjugation operator reads 
 \begin{equation*}
     \hat C \, \left| \psi \right\rangle = \left| \bar\psi \right\rangle
@@ -46,22 +46,22 @@ and $C_{\psi}$ is said to be the C-parity of the particle. As for the the parity
 Both P-parity and C-parity are conserved in the processes governed by all the fundamental forces \href{https://en.wikipedia.org/wiki/Weak_interaction#Violation_of_symmetry}{but the weak force}.
 
 \subsection*{b}
-The notation $^3S_1$ stands for $L=1$ $S=1$ and $J=1$. The $J/\Psi$ Meson is a bound state of a charm quark and an anti-charm quark. By applying the C-parity operator on the state $\left|J/\Psi\right\rangle$ and noting that each quark is transformed into the other one,
+The notation $^3S_1$ stands for $L=1$ $S=1$ and $J=1$. The $J/\Psi$ Meson is a bound state of a charm quark and an anti-charm quark. By applying the C-parity operator on the state $\left|J/\Psi\right\rangle$ and noting that each quark simply swap their roles,
 one obtains that the C-parity of the $J/\psi$ meson is -1 (the only contribution is due to the angular momentum).
 \begin{equation*}
     \hat C \left|J/\Psi\right\rangle = (-1)^J\left|J/\Psi\right\rangle = -\left|J/\Psi\right\rangle
 \end{equation*}
 \subsection*{c}
 $^{15}$N atom has 7 protons and 8 neutrons. Since the neutrons (in the ground state) are all coupled (each sub-shell admits two nucleons) they do not contribute to  the spin of the nucleus and the parity contribution is $+1$. Instead the protons configuration
-of the $^{15}$N atom in the ground state is $(1s)^2 \, (1p_{3/2})^2 \, (1p_{1/2})^1$: only the last proton contributes to the interested quantities. Since the orbital $p$ represents the quantum number $l=1$ the parity of the the nucleus is the product of the neutrons 
-an protons contribution, that is $(+1) \cdot (-1)^1 = -1$. The spin is then $1/2$. \\
-There are three possible alternatives for the first excited state, all of which consists in moving a proton or a neutron to another level starting from the ground state configuration.
+of the $^{15}$N atom in the ground state is $(1s)^2 \, (1p_{3/2})^4 \, (1p_{1/2})^1$: only the last proton contributes to the interested quantities. Since the orbital $p$ represents the quantum number $l=1$ the parity of the the nucleus is the product of the neutrons 
+an protons contribution, that is $(+1) \cdot (-1)^1 = -1$. The spin is then $1/2$. \\ \newpage
+There are three possible alternatives for the first excited state, all of which consist in moving a proton or a neutron to another level starting from the ground state configuration.
 \begin{enumerate}
-    \item Move the $1p_{1/2}$ proton to the $1d_{5/2}$ level \\ $\quad \longrightarrow \quad$ the new proton configuration is $(1s)^2 \, (1p_{3/2})^2 \, (1p_{1/2})^{-2} \, (1d_{5/2})^1$ and the spin-parity is $5/2^+$.
-    \item Move the $1p_{3/2}$ proton to the $1p_{1/2}$ level \\ $\quad \longrightarrow \quad$ the new proton configuration is $(1s)^2 \, (1p_{3/2})^{-1} \, (1p_{1/2})^2$ and the spin-parity is $3/2^-$.
-    \item Move the $1p_{1/2}$ neutron to the $1d_{5/2}$ level \\ $\quad \longrightarrow \quad $ the new neutorn configuration is $(1s)^2 \, (1p_{3/2})^2 \, (1p_{1/2})^{-1} \, (1d_{5/2})^1$. The parity here is non-trivial because of the angular momemnta addition rules.
+    \item Move the $1p_{1/2}$ proton to the $1d_{5/2}$ level (figure \ref{fig:nitrogen_nucleons_excited_states} on the left) \\ $\quad \longrightarrow \quad$ the new proton configuration is $(1s)^2 \, (1p_{3/2})^4  \, (1d_{5/2})^1$ and the spin-parity is $5/2^+$.
+    \item Move the $1p_{1/2}$ neutron to the $1d_{5/2}$ level (figure \ref{fig:nitrogen_nucleons_excited_states} in the middle) \\ $\quad \longrightarrow \quad $ the new neutron configuration is $(1s)^2 \, (1p_{3/2})^4 \, (1p_{1/2})^{1} \, (1d_{5/2})^1$. The parity here is non-trivial because of the angular momemnta addition rules.
+    \item Move the $1p_{3/2}$ proton to the $1p_{1/2}$ level (figure \ref{fig:nitrogen_nucleons_excited_states} on the right)\\ $\quad \longrightarrow \quad$ the new proton configuration is $(1s)^2 \, (1p_{3/2})^{3} \, (1p_{1/2})^2$ and the spin-parity is $3/2^-$.
 \end{enumerate}
-By looking at the suggested table, one can notice that the first excited state is described by configuration $1$, the second excited state by configuration $3$ and the third excited state is described by configuration $2$.
+By looking at the suggested table, one can notice that the first excited state is described by configuration $1$, the second excited state by configuration $2$ and the third excited state is described by configuration $3$.
 
 
 \begin{figure}
@@ -83,7 +83,7 @@ By looking at the suggested table, one can notice that the first excited state i
         }
         \node[draw, circle, inner sep=2pt, fill] at (4, 1.75){};
     \end{tikzpicture}
-    \caption{nothing}
+    \caption{Ground state $^{15}$N nucleus configuration}
     \label{fig:nitrogen_nucleons_ground_state}
 \end{figure}
 
@@ -134,7 +134,7 @@ By looking at the suggested table, one can notice that the first excited state i
         }
 
     \end{tikzpicture}
-    \caption{nothing}
+    \caption{First three excited states of a $^{15}$N nucleus}
     \label{fig:nitrogen_nucleons_excited_states}
 \end{figure}
 
@@ -150,7 +150,7 @@ The allowed states are
 \begin{equation*}
     M_1, E_2
 \end{equation*}
-For $A=15$ one has that (ADD REFERENCE TO KRANE)
+For $A=15$ one has that (reference chapter 10.3 Krane)
 \begin{equation}
     \frac{\lambda(E_2)}{\lambda(M_1)} \approx 10^{-3}
 \end{equation}
@@ -167,12 +167,12 @@ In an analogous way one can find that for the decays to the second and first exc
         $3 \to 2$ & $\approx 1~MeV$ & yes & $1 \leq L \leq 2$ & $E_1, M_2$ & $E_1$ \\
         \bottomrule
     \end{tabular}
-    \caption{}
+    \caption{$\gamma$ transitions from the $3$rd excited state}
     \label{tab:gamma_transitions}
 \end{table}
 For the transition $2 \to 1$ one has that the dominant field is $E_2$ ($2 \leq L \leq 3$ and no parity change) while for the decay 
-$2 \to 0$ the dominant field is $E_1$ ($0 \leq L \leq 1$ and parity change). Hence from the second excited state the nucleus cand ecay to the ground state 
-via $E_1$ radiation, or it can decay to the first excited state via $E_2$ radiation. By comparing probabilities (REFERENCE TO KRANE)
+$2 \to 0$ the dominant field is $E_1$ ($0 \leq L \leq 1$ and parity change). Hence from the second excited state the nucleus can decay to the ground state 
+via $E_1$ radiation, or it can decay to the first excited state via $E_2$ radiation. By comparing probabilities (reference chapter 10.3 Krane)
 \begin{equation*}
     \frac{P_{2 \to 0}}{P_{2 \to 1}} \approx \frac{\lambda(E_1)}{\lambda(E_2)} = \frac{1}{7.3} \cdot 10^{7} \cdot  A^{-2/3} > 1
 \end{equation*}
