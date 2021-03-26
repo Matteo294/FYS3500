@@ -57,15 +57,19 @@ M_evenA = [M(136, zz) for zz in Zvals]
 
 # Odd A
 plt.plot(Zline, Mvals_oddA, linewidth=1.8, color='lightskyblue')
-plt.plot(Zvals, M_oddA, '.', markersize=14, markerfacecolor='red', linewidth=1.8)
+plt.plot(Zvals, M_oddA, '.', markersize=14, 
+            markerfacecolor='red', linewidth=1.8)
 plt.xlabel('Z', fontsize=16)
 plt.ylabel('Mass [MeV]', fontsize=16)
 plt.show()
 
 # Even A
-plt.plot(Zline, Mvals_evenA_evenZ, label="Even Z,N", linewidth=1.8, color='lightskyblue')
-plt.plot(Zline, Mvals_evenA_oddZ, label="Odd Z,N", linewidth=1.8, color='mediumspringgreen')
-plt.plot(Zvals, M_evenA, '.', markersize=14, markerfacecolor='red', linewidth=1.8, label='atoms')
+plt.plot(Zline, Mvals_evenA_evenZ, label="Even Z,N", 
+            linewidth=1.8, color='lightskyblue')
+plt.plot(Zline, Mvals_evenA_oddZ, label="Odd Z,N", 
+            linewidth=1.8, color='mediumspringgreen')
+plt.plot(Zvals, M_evenA, '.', markersize=14, markerfacecolor='red', 
+            linewidth=1.8, label='atoms')
 plt.xlabel('Z', fontsize=16)
 plt.ylabel('Mass [MeV]', fontsize=16)
 plt.legend(fontsize=12)
